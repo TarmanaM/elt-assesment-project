@@ -1,9 +1,9 @@
 CREATE TABLE store (
     store_id INT PRIMARY KEY,
-    store_name VARCHAR(255),
+    store_name VARCHAR(100),
     store_format_name VARCHAR(100),
     store_city VARCHAR(100),
-    store_state VARCHAR(50)
+    store_state VARCHAR(10)
 );
 
 CREATE TABLE trx_total (
