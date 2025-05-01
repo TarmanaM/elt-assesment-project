@@ -1,0 +1,25 @@
+.env
+# Ignore environment files
+.env
+.env.*
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+quiz-api/venv/
+quiz-etl/venv/
+
+# Ignore Docker related
+*.log
+*.pid
+*.sock
+
+
+# OS generated files
+.DS_Store
+Thumbs.db
