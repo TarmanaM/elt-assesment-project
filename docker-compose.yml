@@ -28,3 +28,23 @@ services:
       POSTGRES_DATABASE: ${POSTGRES_DB}
     env_file:
       - .env
+  etl:
+    build:
+      context: ./elt-data
+    container_name: quiz_elt
+    depends_on:
+      - mysql
+      - postgres
+    env_file:
+    - .env
+
+  api:
+    build:
+      context: ./quiz-api
+    container_name: quiz_api
+    ports:
+    - "${API_PORT_HOST}:${API_PORT}"
+    depends_on:
+      - postgres
+    env_file:
+    - .env
