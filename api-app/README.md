@@ -22,7 +22,7 @@
     - `models/`: Definisi struktur tabel database (pakai SQLAlchemy ORM).
     - `schemas/`: Struktur data untuk request & response (pakai Pydantic).
     - `crud/`: Query database dan logika bisnis.
-    - `routers/`: Routing untuk masing-masing endpoint API.
+    - `api/`: Routing untuk masing-masing endpoint API.
     - `db/`: Setup koneksi database (engine dan session).
     - `main.py`: Entry point untuk inisialisasi FastAPI dan mendaftarkan router.
 
