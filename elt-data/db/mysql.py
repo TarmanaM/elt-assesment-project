@@ -13,11 +13,16 @@ def get_mysql_engine():
     else:
         host = "localhost"  
         port = int(os.getenv("MYSQL_PORT_HOST", 3307)) 
-
+    
+    user = os.getenv("MYSQL_USER", "root")
+    if user == "root":
+        password = os.getenv("MYSQL_ROOT_PASSWORD")
+    else:
+        password = os.getenv("MYSQL_PASSWORD")
     url = URL.create(
         drivername="mysql+pymysql",
-        username=os.getenv("MYSQL_USER", "root"),
-        password=os.getenv("MYSQL_PASSWORD"),
+        username=user,
+        password=password,
         host= host,
         port= port, 
         database=os.getenv("MYSQL_DB")

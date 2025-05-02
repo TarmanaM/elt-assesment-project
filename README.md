@@ -13,9 +13,12 @@ Ini adalah API service untuk kebutuhan data ELT (Extract, Load, Transform) berba
 git clone https://github.com/TarmanaM/elt-assesment-project.git
 cd elt-assesment-project
 cp .env.template .env
+```
+Lalu Ubah konfigurasi pada .env dan build dockernya 
+
+```bash
 docker-compose up --build
 ```
-
 
 ## Testing enpoint
 GET
