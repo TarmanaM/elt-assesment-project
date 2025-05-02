@@ -4,7 +4,7 @@ from utils.transfer import transfer_table
 import logging 
 
 
-def run_etl():
+def run_elt():
     try:
         mysql_engine = get_mysql_engine()
         pg_engine = get_postgres_engine()
@@ -17,4 +17,4 @@ def run_etl():
         logging.error("ETL Failed", exc_info=True)
 
 if __name__ == "__main__":
-    run_etl()
+    run_elt()

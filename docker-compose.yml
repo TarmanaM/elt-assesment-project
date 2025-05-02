@@ -1,4 +1,4 @@
-version: '1.2'
+version: '3.3'
 
 services:
   mysql:
@@ -8,7 +8,7 @@ services:
       - "${MYSQL_PORT_HOST}:${MYSQL_PORT}"
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_USER: ${MYSQL_USER}
+     
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DB}
     volumes:
@@ -38,13 +38,13 @@ services:
     env_file:
     - .env
 
-  api:
-    build:
-      context: ./quiz-api
-    container_name: quiz_api
-    ports:
-    - "${API_PORT_HOST}:${API_PORT}"
-    depends_on:
-      - postgres
-    env_file:
-    - .env
+  # api:
+  #   build:
+  #     context: ./quiz-api
+  #   container_name: quiz_api
+  #   ports:
+  #   - "${API_PORT_HOST}:${API_PORT}"
+  #   depends_on:
+  #     - postgres
+  #   env_file:
+  #   - .env
