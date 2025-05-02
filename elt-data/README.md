@@ -14,10 +14,12 @@ ELT berhasil saat sudah memberikan output "ELT success!"
 
 ## Running Program
 <p>ELT Datapipeline akan berjalan otomatis saat docker pertamakali dibuild. Namun juga dapat dijalankan dengan mandiri dengan</p>
+
 ```bash
  docker exec -it quiz_elt bash 
  python main.py
- 
+    
+
 ```markdown
 > 💡 Note: `quiz_elt` adalah nama service container untuk ETL di `docker-compose.yml`. Jika kamu pakai nama berbeda, ganti sesuai nama servicemu.
 
