@@ -8,12 +8,11 @@ API_USE_DOCKER = os.getenv("API_USE_DOCKER", "false").lower() == "true"
 def get_mysql_engine():
     
     if API_USE_DOCKER:
-        host = "mysql"  # Nama service container di Docker
-        port = int(os.getenv("MYSQL_PORT", 3306))  # Port di dalam Docker container
+        host = "mysql" 
+        port = int(os.getenv("MYSQL_PORT", 3306))  
     else:
-        host = "localhost"  # Host lokal
-        port = int(os.getenv("MYSQL_PORT_HOST", 3307))  # Port yang dipetakan dari Docker container
-
+        host = "localhost"  
+        port = int(os.getenv("MYSQL_PORT_HOST", 3307)) 
 
     url = URL.create(
         drivername="mysql+pymysql",

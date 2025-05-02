@@ -7,11 +7,11 @@ API_USE_DOCKER = os.getenv("API_USE_DOCKER", "false").lower() == "true"
 
 def get_postgres_engine():
     if API_USE_DOCKER:
-        host = os.getenv("POSTGRES_HOST", "postgres")  # Nama service di Docker Compose
-        port = int(os.getenv("POSTGRES_PORT", 5432))   # Port dalam container
+        host = os.getenv("POSTGRES_HOST", "postgres")  
+        port = int(os.getenv("POSTGRES_PORT", 5432))   
     else:
-        host = os.getenv("POSTGRES_HOST", "localhost")  # Host lokal
-        port = int(os.getenv("POSTGRES_PORT_HOST", 5433))  # Port di host yang dipetakan
+        host = os.getenv("POSTGRES_HOST", "localhost") 
+        port = int(os.getenv("POSTGRES_PORT_HOST", 5433))  
 
     url = URL.create(
         drivername="postgresql+psycopg2",
