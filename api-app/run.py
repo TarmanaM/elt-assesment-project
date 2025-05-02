@@ -1,6 +1,9 @@
 import uvicorn
 import os
 import signal
+from dotenv import load_dotenv
+
+load_dotenv()
 
 if __name__ == "__main__":
     port = int(os.getenv("API_PORT", 8000))  # Default ke 8000 jika tidak ada env
