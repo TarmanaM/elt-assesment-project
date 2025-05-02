@@ -4,6 +4,7 @@
 
 ## Running Program
 <p>API akan berjalan otomatis saat docker pertamakali dibuild. Namun juga dapat dijalankan dengan mandiri dengan</p>
+
 ```bash
  docker exec -it quiz_api bash 
  python run.py
