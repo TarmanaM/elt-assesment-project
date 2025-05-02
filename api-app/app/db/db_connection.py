@@ -5,11 +5,11 @@ from sqlalchemy.ext.declarative import declarative_base
 from dotenv import load_dotenv
 
 load_dotenv()
-USE_DOCKER = os.getenv("USE_DOCKER", "false").lower() == "true"
+API_USE_DOCKER = os.getenv("API_USE_DOCKER", "false").lower() == "true"
 
 
 def get_postgres_engine():
-    if USE_DOCKER:
+    if API_USE_DOCKER:
         host = os.getenv("POSTGRES_HOST", "postgres")  # Nama service di Docker Compose
         port = int(os.getenv("POSTGRES_PORT", 5432))   # Port dalam container
     else:
