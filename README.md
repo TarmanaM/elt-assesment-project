@@ -1,7 +1,7 @@
 # 🚀 DDV ELT API Project
 
 ## Architecture Diagram
-![ELT Assessment Project ](./Elt-Data-Pipeline.png)
+![ELT Assessment Project ](./ELT-Data-Pipeline.png)
 
 Ini adalah API service untuk kebutuhan data ELT (Extract, Load, Transform) berbasis **FastAPI** + **SQLAlchemy** + **PostgreSQL**, dengan setup dockerized.
 
